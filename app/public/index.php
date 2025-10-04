@@ -21,6 +21,7 @@ $router->use(CsrfMiddleware::class);
 
 //routes publiques
 $router->get('/', 'HomeController#index', 'home');
+$router->get('/login', 'AuthController#login', 'login');
 $router->get('/error', 'ErrorController#index', 'error');
 
 try {

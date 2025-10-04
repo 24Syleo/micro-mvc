@@ -80,3 +80,7 @@ h5 {
     --bs-alert-bg: var(--danger) !important;
     --bs-alert-border-color: var(--danger) !important;
 }
+
+.active {
+    color: var(--primary) !important;
+}
