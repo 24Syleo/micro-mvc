@@ -17,7 +17,7 @@
         }
     ],
     "scripts": {
-        "hello": "echo 'Hello depuis Composer'",
-        "start": "php -S localhost:8000 -t public"
+        "database": "php database/setup.php",
+        "migrations": "php database/run-migrations.php"
     }
 }
