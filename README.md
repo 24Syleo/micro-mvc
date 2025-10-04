@@ -12,8 +12,10 @@ docker compose run --rm composer install
 
 ### database
 
-docker compose run --rm composer database
+docker compose run --rm php php database/setup.php
+ce script executera le fichier schema.sql
 
 ### migrations
 
-docker compose run --rm composer migrations
+docker compose run --rm php php database/migrations/run-migrations.php
+ce script executera les différentes dans le dossier migrations.
