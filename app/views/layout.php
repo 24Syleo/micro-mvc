@@ -8,12 +8,10 @@
     <meta name="csrf-token" content="<?= $_SESSION['csrf_token'] ?? '' ?>">
     <title><?= e($title) ?? 'Mon App' ?></title>
     <link rel="stylesheet" href="/css/base.css">
-    <link rel="stylesheet" href="/css/components.css">
-    <link rel="stylesheet" href="/css/navbar.css">
-    <link rel="stylesheet" href="/css/form.css">
-    <link rel="stylesheet" href="/css/small_screen.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
@@ -36,20 +34,13 @@ if (empty($pageId)) {
 ?>
 
 <body data-page="<?= e($pageId) ?>">
-
-
-    <body data-page="<?= e($page[0]) ?>">
-        <?php include_once 'partials/navbar.php' ?>
-        <?php
-        if ($_SESSION['user'] && $_SESSION['user']->getRole() === 'admin' && $_SESSION['user'] instanceof \App\entity\User) {
-            include_once 'partials/navbarAdmin.php';
-        }
-        ?>
-        <?php include_once 'partials/flashmessage.php' ?>
-        <main class="container alg-center col">
-            <?= $content ?>
-        </main>
-        <?php include_once 'partials/footer.php' ?>
-    </body>
+    <?php include_once 'partials/flashmessage.php' ?>
+    <main class="container">
+        <?= $content ?>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+    </script>
+</body>
 
 </html>
