@@ -1,9 +1,9 @@
-# build les images
+### build les images
 docker compose up --build
-# installer les librairies
+### installer les librairies
 docker compose run --rm composer install
 ## commandes pour les scripts
-# database
+### database
 docker compose run --rm composer database
-# migrations
+### migrations
 docker compose run --rm composer migrations
