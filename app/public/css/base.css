@@ -9,13 +9,27 @@
     --size-regular: 16px;
     --size-large: 22px;
     --size-title: 28px;
-    --primary: #123026;
-    --secondary: #1a5e9d;
-    --tertiary: #d19c57;
-    --error: #790604;
+    --success: #123026;
+    --primary: #1a5e9d;
+    --warning: #d19c57;
+    --danger: #790604;
     --white: #ffffff;
     --black: #333333;
     --light-grey: #f3f3f3;
+
+    /* surcharge des variables bootstrap */
+    --bs-primary: var(--primary);
+    --bs-success: var(--success);
+    --bs-warning: var(--warning);
+    --bs-danger: var(--danger);
+    --bs-white: var(--white);
+    --bs-black: var(--black);
+
+    /* pour conserver les hovers corrects */
+    --bs-primary-rgb: 26, 94, 157;
+    --bs-success-rgb: 18, 48, 38;
+    --bs-warning-rgb: 209, 156, 87;
+    --bs-danger-rgb: 121, 6, 4;
 }
 
 *,
@@ -51,6 +65,18 @@ h4,
 h5 {
     font-weight: var(--bolder) !important;
     font-size: var(--size-title) !important;
-    color: var(--secondary) !important;
+    color: var(--primary) !important;
     text-transform: uppercase;
+}
+
+.alert-success {
+    --bs-alert-color: var(--white) !important;
+    --bs-alert-bg: var(--success) !important;
+    --bs-alert-border-color: var(--success) !important;
+}
+
+.alert-danger {
+    --bs-alert-color: var(--white) !important;
+    --bs-alert-bg: var(--danger) !important;
+    --bs-alert-border-color: var(--danger) !important;
 }
