@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Entity;
+namespace App\entity;
 
 use App\Services\Hydrator;
 

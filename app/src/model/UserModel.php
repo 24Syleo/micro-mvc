@@ -49,8 +49,8 @@ class UserModel extends Model
                 'role' => $data['role'],
                 'password' => $data['password'],
             ]);
-            $data['id'] = (int)$this->pdo->lastInsertId();
-            return $this->find($data['id']);
+            $id = (int)$this->pdo->lastInsertId();
+            return $this->find($id);
         } catch (Exception $e) {
             throw $e;
         }

@@ -13,6 +13,21 @@
     <div class="tab-content">
         <div id="pills-login" class="tab-pane fade in active" role="tabpanel" aria-labelledby="pills-login-tab">
             <h2 class="text-center">login</h2>
+            <form id="formLogin" class="needs-validation" novalidate>
+                <h2 class="text-center">register</h2>
+                <div class="mb-3">
+                    <label for="emailLogin" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="emailLogin" placeholder="Enter email" name="email">
+                    <span class="response"></span>
+                </div>
+                <div class="mb-3">
+                    <label for="passwordLogin" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="passwordLogin" placeholder="Enter password"
+                        name="password">
+                    <span class="response"></span>
+                </div>
+                <button id="submitLogin" type="submit" class="btn btn-success">Register</button>
+            </form>
         </div>
         <div id="pills-register" class="tab-pane fade">
             <form id="formRegister" class="needs-validation" novalidate>
@@ -39,7 +54,7 @@
                         name="password">
                     <span class="response"></span>
                 </div>
-                <button id="submitRegister" type="submit" class="btn btn-primary">Register</button>
+                <button id="submitRegister" type="submit" class="btn btn-success">Register</button>
             </form>
         </div>
     </div>

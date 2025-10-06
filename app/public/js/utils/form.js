@@ -15,8 +15,6 @@ export function form(idForm, submit, endpoint, redirect) {
             const data = dataForm(form)
             try {
                 const res = await FetchService.post(endpoint, data);
-                console.log("res", res);
-
                 if (res.success) {
                     if (redirect) {
                         location.href = redirect;
@@ -27,7 +25,7 @@ export function form(idForm, submit, endpoint, redirect) {
                     location.href = '/error';
                 }
             } catch (err) {
-                console.error(err);
+                console.log(err);
             }
         }
     }
