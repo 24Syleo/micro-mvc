@@ -19,10 +19,15 @@ $router = new Router();
 // Middleware global
 $router->use(CsrfMiddleware::class);
 
-//routes publiques
+//routes publiques GET
 $router->get('/', 'HomeController#index', 'home');
 $router->get('/login', 'AuthController#login', 'login');
 $router->get('/error', 'ErrorController#index', 'error');
+
+
+//routes publiques POST
+$router->post('/user/create', 'AuthController#create', 'user_create');
+$router->post('/auth/login', 'AuthController#auth', 'auth_login');
 
 try {
     $router->dispatch();

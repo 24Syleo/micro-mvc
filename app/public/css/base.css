@@ -84,3 +84,21 @@ h5 {
 .active {
     color: var(--primary) !important;
 }
+
+.btn-success {
+    border: none;
+    background-color: var(--success) !important;
+}
+
+.btn-success:hover {
+    background-color: green !important;
+}
+
+.btn-primary {
+    border: none;
+    background-color: var(--primary) !important;
+}
+
+.btn-primary:hover {
+    background-color: blue !important;
+}

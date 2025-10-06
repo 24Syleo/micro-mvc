@@ -1,4 +1,5 @@
-export function init() {
-    console.log("login");
+import { form } from "../utils/form.js";
 
+export function init() {
+    form("formRegister", "submitRegister", "/user/create");
 }
